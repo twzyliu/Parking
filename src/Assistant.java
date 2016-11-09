@@ -13,14 +13,14 @@ public class Assistant {
     public boolean canComeIn() {
         boolean isFull = false;
         for (Parking parking : parkList) {
-            isFull |= parking.canComeIn();
+            isFull |= parking.getSpace() > 0;
         }
         return isFull;
     }
 
     public Parking getEmptyParking() {
         for (Parking parking : parkList) {
-            if (parking.canComeIn()) {
+            if (parking.getSpace() > 0) {
                 return parking;
             }
         }

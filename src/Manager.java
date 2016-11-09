@@ -23,7 +23,7 @@ public class Manager {
     public boolean canPark() {
         boolean isFull = false;
         for (Parking parking : parkList) {
-            isFull |= parking.canComeIn();
+            isFull |= parking.getSpace() > 0;
         }
         return isFull;
     }

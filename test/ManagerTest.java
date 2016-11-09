@@ -10,14 +10,13 @@ import static org.junit.Assert.assertThat;
  */
 public class ManagerTest {
 
-    public static final boolean IS_EMPTY = true;
-    public static final boolean ISNOT_EMPTY = false;
+    public static final int CAPACITY = 2;
 
     @Test
     public void manager_should_find_parking_which_has_more_space() throws Exception {
-        Parking parking1 = new Parking(IS_EMPTY);
-        Parking parking2 = new Parking(IS_EMPTY);
-        Parking parking3 = new Parking(IS_EMPTY);
+        Parking parking1 = new Parking(CAPACITY);
+        Parking parking2 = new Parking(CAPACITY);
+        Parking parking3 = new Parking(CAPACITY);
         parking1.carComeIn(new Car(0));
         parking2.carComeIn(new Car(1));
         ArrayList<Parking> parkList = new ArrayList<>();
@@ -32,9 +31,9 @@ public class ManagerTest {
     @Test
     public void manager_cannot_park_car_when_all_parking_are_full() throws Exception {
         ArrayList<Parking> parkList = new ArrayList<>();
-        parkList.add(new Parking(ISNOT_EMPTY));
-        parkList.add(new Parking(ISNOT_EMPTY));
-        parkList.add(new Parking(ISNOT_EMPTY));
+        parkList.add(new Parking(CAPACITY));
+        parkList.add(new Parking(CAPACITY));
+        parkList.add(new Parking(CAPACITY));
         Manager manager = new Manager(parkList);
         assertThat(manager.canPark(), is(false));
     }
