@@ -33,4 +33,8 @@ public class Parking {
     public int getSpace() {
         return capacity - carList.size();
     }
+
+    public double getSpacePercentage() {
+        return getSpace() / capacity;
+    }
 }

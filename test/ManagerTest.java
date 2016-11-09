@@ -89,4 +89,19 @@ public class ManagerTest {
         assertThat(manager.canPark(), is(true));
         assertThat(manager.getAvailableParking(), is(parking2));
     }
+
+    @Test
+    public void manager_should_find_parking_which_has_more_percentage_space() throws Exception {
+        Parking parking1 = new Parking(CAPACITY + 100);
+        Parking parking2 = new Parking(CAPACITY);
+        parking1.carComeIn(car);
+        ArrayList<Parking> parkList = new ArrayList<>();
+        parkList.add(fullParking);
+        parkList.add(parking1);
+        parkList.add(parking2);
+        Selector selector = new MorePercentageSelector(parkList);
+        Manager manager = new Manager(parkList, selector);
+        assertThat(manager.canPark(), is(true));
+        assertThat(manager.getAvailableParking(), is(parking2));
+    }
 }
