@@ -41,4 +41,10 @@ public class ParkingTest {
         assertThat(parking.carComeOut(car), is(true));
         assertThat(parking.getSpace(), is(CAPACITY));
     }
+
+    @Test
+    public void car_cannot_come_out_when_parking_is_empty() throws Exception {
+        Parking parking = new Parking(CAPACITY);
+        assertThat(parking.carComeOut(car), is(false));
+    }
 }

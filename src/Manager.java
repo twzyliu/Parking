@@ -5,19 +5,16 @@ import java.util.ArrayList;
  */
 public class Manager {
     private ArrayList<Parking> parkList;
+    private Selector selector;
 
     public Manager(ArrayList<Parking> parkList) {
         this.parkList = parkList;
+        this.selector = new DefaultSelector(parkList);
     }
 
-    public Parking findParking() {
-        Parking moreSpaceParking = parkList.get(0);
-        for (Parking parking : parkList) {
-            if (parking.getSpace() > moreSpaceParking.getSpace()) {
-                moreSpaceParking = parking;
-            }
-        }
-        return moreSpaceParking;
+    public Manager(ArrayList<Parking> parkList, Selector selector) {
+        this.parkList = parkList;
+        this.selector = selector;
     }
 
     public boolean canPark() {
@@ -26,5 +23,17 @@ public class Manager {
             isFull |= parking.getSpace() > 0;
         }
         return isFull;
+    }
+
+    public Parking getAvailableParking() {
+        return selector.getAvailableParking();
+    }
+
+    public boolean helpPark(Parking availableParking, Car car) {
+        return availableParking.carComeIn(car);
+    }
+
+    public boolean helpLeave(Parking availableParking, Car car) {
+        return availableParking.carComeOut(car);
     }
 }
