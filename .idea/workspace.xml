@@ -30,25 +30,25 @@
       <file leaf-file-name="Assistant.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Assistant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            <state relative-caret-position="160">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding>
                 <element signature="e#190#191#0" expanded="true" />
                 <element signature="e#230#231#0" expanded="true" />
-                <element signature="e#691#692#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#794#795#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
+                <element signature="e#692#693#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AssistantTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AssistantTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/AssistantTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,8 +59,8 @@
       <file leaf-file-name="Manager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+            <state relative-caret-position="175">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
               <folding>
                 <element signature="e#186#187#0" expanded="true" />
                 <element signature="e#226#227#0" expanded="true" />
@@ -94,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParkingTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ParkingTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ParkingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="390">
               <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -180,11 +180,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/Car.java" />
         <option value="$PROJECT_DIR$/src/Manager.java" />
-        <option value="$PROJECT_DIR$/src/Assistant.java" />
-        <option value="$PROJECT_DIR$/test/AssistantTest.java" />
         <option value="$PROJECT_DIR$/test/ManagerTest.java" />
         <option value="$PROJECT_DIR$/src/Parking.java" />
         <option value="$PROJECT_DIR$/test/ParkingTest.java" />
+        <option value="$PROJECT_DIR$/src/Assistant.java" />
+        <option value="$PROJECT_DIR$/test/AssistantTest.java" />
       </list>
     </option>
   </component>
@@ -938,26 +938,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478678514554</updated>
-      <workItem from="1478678515889" duration="9551000" />
+      <workItem from="1478678515889" duration="10174000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_Parking - 2016.11.09 at 19h 33m 36s.xml">
-      <configuration name="All in Parking" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_Parking - 2016.11.09 at 19h 51m 36s.xml">
-      <configuration name="All in Parking" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_Parking - 2016.11.09 at 19h 54m 54s.xml">
-      <configuration name="All in Parking" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_Parking - 2016.11.09 at 19h 55m 28s.xml">
-      <configuration name="All in Parking" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_Parking - 2016.11.09 at 19h 59m 09s.xml">
-      <configuration name="All in Parking" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_Parking - 2016.11.09 at 19h 59m 36s.xml">
       <configuration name="All in Parking" configurationId="JUnit" />
     </history-entry>
@@ -970,12 +955,27 @@
     <history-entry file="All_in_Parking - 2016.11.09 at 20h 03m 46s.xml">
       <configuration name="All in Parking" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssistantTest - 2016.11.09 at 19h 33m 09s.xml">
-      <configuration name="AssistantTest" configurationId="JUnit" />
+    <history-entry file="All_in_Parking - 2016.11.09 at 20h 09m 44s.xml">
+      <configuration name="All in Parking" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Parking - 2016.11.09 at 20h 11m 40s.xml">
+      <configuration name="All in Parking" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Parking - 2016.11.09 at 20h 12m 20s.xml">
+      <configuration name="All in Parking" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Parking - 2016.11.09 at 20h 13m 53s.xml">
+      <configuration name="All in Parking" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Parking - 2016.11.09 at 20h 15m 00s.xml">
+      <configuration name="All in Parking" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Parking - 2016.11.09 at 20h 15m 37s.xml">
+      <configuration name="All in Parking" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9551000" />
+    <option name="totallyTimeSpent" value="10174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1064,48 +1064,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Assistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding>
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/AssistantTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/ManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9">
           <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding>
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1122,10 +1086,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="e#186#187#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assistant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#190#191#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/ParkingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="390">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/AssistantTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

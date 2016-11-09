@@ -10,7 +10,7 @@ public class Assistant {
         this.parkList = parkList;
     }
 
-    public boolean canComeIn() {
+    public boolean canPark() {
         boolean isFull = false;
         for (Parking parking : parkList) {
             isFull |= parking.getSpace() > 0;
@@ -27,11 +27,11 @@ public class Assistant {
         return null;
     }
 
-    public void helpPark(Parking emptyParking, Car car) {
-        emptyParking.carComeIn(car);
+    public boolean helpPark(Parking emptyParking, Car car) {
+        return emptyParking.carComeIn(car);
     }
 
-    public void helpLeave(Parking emptyParking, Car car) {
-        emptyParking.carComeOut(car);
+    public boolean helpLeave(Parking emptyParking, Car car) {
+        return emptyParking.carComeOut(car);
     }
 }

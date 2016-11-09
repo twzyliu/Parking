@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -10,56 +11,65 @@ import static org.junit.Assert.assertThat;
  */
 public class AssistantTest {
 
-    public static final int CAPACITY = 2;
+    public static final int CAPACITY = 1;
+    private Car car;
+    private Parking fullParking;
+
+    @Before
+    public void setUp() throws Exception {
+        car = new Car(0);
+        fullParking = new Parking(CAPACITY);
+        fullParking.carComeIn(car);
+    }
 
     @Test
     public void car_cannot_come_in_when_three_parking_are_full() throws Exception {
         ArrayList<Parking> parkList = new ArrayList<>();
-        parkList.add(new Parking(CAPACITY));
-        parkList.add(new Parking(CAPACITY));
-        parkList.add(new Parking(CAPACITY));
+        parkList.add(fullParking);
+        parkList.add(fullParking);
+        parkList.add(fullParking);
         Assistant assistant = new Assistant(parkList);
-        assertThat(assistant.canComeIn(), is(false));
+        assertThat(assistant.canPark(), is(false));
     }
 
     @Test
-    public void car_can_come_in_parking3_when_parking3_is_empty() throws Exception {
-        Parking parking3 = new Parking(CAPACITY);
+    public void car_can_come_in_parking_when_parking_is_empty() throws Exception {
+        Parking parking = new Parking(CAPACITY);
         ArrayList<Parking> parkList = new ArrayList<>();
-        parkList.add(new Parking(CAPACITY));
-        parkList.add(new Parking(CAPACITY));
-        parkList.add(parking3);
+        parkList.add(fullParking);
+        parkList.add(fullParking);
+        parkList.add(parking);
         Assistant assistant = new Assistant(parkList);
-        assertThat(assistant.canComeIn(), is(true));
-        assertThat(assistant.getEmptyParking(), is(parking3));
+        assertThat(assistant.canPark(), is(true));
+        assertThat(assistant.getEmptyParking(), is(parking));
     }
 
     @Test
     public void assistant_can_help_park_car_when_parking_is_empty() throws Exception {
-        Parking parking3 = new Parking(CAPACITY);
+        Parking parking = new Parking(CAPACITY);
         ArrayList<Parking> parkList = new ArrayList<>();
-        parkList.add(new Parking(CAPACITY));
-        parkList.add(new Parking(CAPACITY));
-        parkList.add(parking3);
+        parkList.add(fullParking);
+        parkList.add(fullParking);
+        parkList.add(parking);
         Assistant assistant = new Assistant(parkList);
         Parking emptyParking = assistant.getEmptyParking();
         int space = emptyParking.getSpace();
-        assistant.helpPark(emptyParking, new Car(0));
+        assertThat(assistant.helpPark(emptyParking, car), is(true));
         assertThat(emptyParking.getSpace(), is(space - 1));
     }
 
     @Test
     public void assistant_can_help_leave_car_when_car_is_in_parking() throws Exception {
-        Parking parking3 = new Parking(CAPACITY);
+        Parking parking = new Parking(CAPACITY);
         ArrayList<Parking> parkList = new ArrayList<>();
-        parkList.add(new Parking(CAPACITY));
-        parkList.add(new Parking(CAPACITY));
-        parkList.add(parking3);
+        parkList.add(fullParking);
+        parkList.add(fullParking);
+        parkList.add(parking);
         Assistant assistant = new Assistant(parkList);
         Parking emptyParking = assistant.getEmptyParking();
-        assistant.helpPark(emptyParking, new Car(0));
+        assistant.helpPark(emptyParking, car);
         int space = emptyParking.getSpace();
-        assistant.helpLeave(emptyParking, new Car(0));
+        assertThat(assistant.helpLeave(emptyParking, car), is(true));
         assertThat(emptyParking.getSpace(), is(space + 1));
     }
 }
