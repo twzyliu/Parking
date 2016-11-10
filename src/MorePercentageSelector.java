@@ -3,17 +3,17 @@ import java.util.List;
 /**
  * Created by zyongliu on 09/11/16.
  */
-public class MorePercentageSelector implements Selector {
-    private List<Parking> parkingList;
+class MorePercentageSelector implements Selector {
+    private List<withParkingCapability> parkingList;
 
-    public MorePercentageSelector(List<Parking> parkingList) {
+    public MorePercentageSelector(List<withParkingCapability> parkingList) {
         this.parkingList = parkingList;
     }
 
     @Override
-    public Parking getAvailableParking() {
-        Parking morePercentageParking = parkingList.get(0);
-        for (Parking parking : parkingList) {
+    public withParkingCapability getAvailableParking() {
+        withParkingCapability morePercentageParking = parkingList.get(0);
+        for (withParkingCapability parking : parkingList) {
             if (parking.getSpacePercentage() > morePercentageParking.getSpacePercentage()) {
                 morePercentageParking = parking;
             }

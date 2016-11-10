@@ -9,7 +9,7 @@ import static org.junit.Assert.assertThat;
  */
 public class ParkingTest {
 
-    public static final int CAPACITY = 1;
+    private static final int CAPACITY = 1;
     private Car car;
 
     @Before
@@ -19,32 +19,32 @@ public class ParkingTest {
 
     @Test
     public void car_can_come_in_when_parking_is_empty() throws Exception {
-        Parking parking = new Parking(CAPACITY);
+        withParkingCapability parking = new Parking(CAPACITY);
         assertThat(parking.getSpace(), is(CAPACITY));
-        assertThat(parking.carComeIn(car), is(true));
+        assertThat(parking.park(car), is(true));
         assertThat(parking.getSpace(), is(CAPACITY - 1));
     }
 
     @Test
     public void car_cannot_come_in_when_parking_isnot_empty() throws Exception {
-        Parking parking = new Parking(CAPACITY);
-        parking.carComeIn(car);
+        withParkingCapability parking = new Parking(CAPACITY);
+        parking.park(car);
         assertThat(parking.getSpace(), is(0));
-        assertThat(parking.carComeIn(car), is(false));
+        assertThat(parking.park(car), is(false));
     }
 
     @Test
     public void car_can_come_out_when_parking_isnot_empty() throws Exception {
-        Parking parking = new Parking(CAPACITY);
-        parking.carComeIn(car);
+        withParkingCapability parking = new Parking(CAPACITY);
+        parking.park(car);
         assertThat(parking.getSpace(), is(CAPACITY - 1));
-        assertThat(parking.carComeOut(car), is(true));
+        assertThat(parking.unpark(car), is(true));
         assertThat(parking.getSpace(), is(CAPACITY));
     }
 
     @Test
     public void car_cannot_come_out_when_parking_is_empty() throws Exception {
-        Parking parking = new Parking(CAPACITY);
-        assertThat(parking.carComeOut(car), is(false));
+        withParkingCapability parking = new Parking(CAPACITY);
+        assertThat(parking.unpark(car), is(false));
     }
 }
